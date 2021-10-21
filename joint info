@@ -1,0 +1,78 @@
+<joint name="torso_lift_joint" type="prismatic">
+  <origin rpy="-6.123E-17 0 0" xyz="-0.086875 0 0.37743" />
+
+<joint name="shoulder_pan_joint" type="revolute">
+  <origin rpy="0 0 0" xyz="0.119525 0 0.34858" />
+
+<joint name="shoulder_lift_joint" type="revolute">
+  <origin rpy="0 0 0" xyz="0.117 0 0.0599999999999999" />
+
+<joint name="upperarm_roll_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.219 0 0" />
+
+<joint name="elbow_flex_joint" type="revolute">
+  <origin rpy="0 0 0" xyz="0.133 0 0" />
+
+<joint name="forearm_roll_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.197 0 0" />
+
+<joint name="wrist_flex_joint" type="revolute">
+  <origin rpy="0 0 0" xyz="0.1245 0 0" />
+
+<joint name="wrist_roll_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.1385 0 0" />
+
+
+
+  "base_link"
+  "r_wheel_link"
+  "l_wheel_link"
+  "torso_lift_link"
+  "head_pan_link"
+  "head_tilt_link"
+  "shoulder_pan_link"
+  "shoulder_lift_link"
+  "upperarm_roll_link"
+  "elbow_flex_link"
+  "forearm_roll_link"
+  "wrist_flex_link"
+  "wrist_roll_link"
+  "gripper_link"
+  "r_gripper_finger_link"
+  "l_gripper_finger_link"
+
+
+  "bellows_link"
+  "bellows_link2"
+  "estop_link"
+  "laser_link"
+  "torso_fixed_link"
+  "head_camera_link"
+  "head_camera_rgb_frame"
+  "head_camera_rgb_optical_frame"
+  "head_camera_depth_frame"
+  "head_camera_depth_optical_frame"
+
+
+
+
+Librviz tutorial:http://docs.ros.org/lunar/api/librviz_tutorial/html/
+API: http://docs.ros.org/jade/api/rviz/html/c++/index.html
+
+  rviz::VisualizationManager* manager_;
+  rviz::RenderPanel* render_panel_;
+  rviz::Display* grid_;
+
+  render_panel_ = new rviz::RenderPanel();
+  manager_ = new rviz::VisualizationManager( render_panel_ );
+  render_panel_->initialize( manager_->getSceneManager(), manager_ );
+  manager_->initialize();
+  manager_->startUpdate();
+
+
+sita = vertical
+phy = hor
+
+  x = r* sin(sita) *cos(phy);
+  y = r * sin(sita) * sin(phy);
+  z = r * cos(sita)

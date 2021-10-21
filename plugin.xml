@@ -1,0 +1,25 @@
+<library path="lib/librqt_control_panel">
+  <class name="rqt_control_panel/ControlPanel" type="rqt_control_panel::ControlPanel" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      A gui of controller by shen.
+    </description>
+    <qtgui>
+      <!-- optional grouping...
+      <group>
+        <label>Group</label>
+      </group>
+      <group>
+        <label>Subgroup</label>
+      </group>
+      -->
+      <group>
+        <label>Robot Tools</label>
+        <icon type="theme">folder</icon>
+        <statustip>Plugins related to robot tools.</statustip>
+      </group>
+      <label>Control Panel</label>
+      <icon type="theme">image-x-generic</icon>
+      <statustip>Control your robot with a panel.</statustip>
+    </qtgui>
+  </class>
+</library>
