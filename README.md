@@ -1,1 +1,3 @@
-# robot-control-panel
+# Robot control panel
+
+Centre for Autonomous Systems of UTS requires a remote robot control panel for an experimental robot. The experimental robot has wheels to move, an arm to fetch objects, and a camera on head to perceive the environment and scan objects. This control panel provides a user interface which built by Qt framework. The communication between robots and control panel established by Robot Operating System (ROS). Robot moving functions are implemented by MoveIt planning framework, scan function is achieved by OpenCV. Besides, Rviz builds a real-time virtual robot for remotely monitor robot postures and movements. 
